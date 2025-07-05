@@ -202,7 +202,7 @@
         function scheduleNextSound() {
             clearTimeout(soundTimeout);
             if (!isRunning || secondsLeft <= 0) return;
-            const randomIntervalSeconds = Math.floor(Math.random() * (300 - 60 + 1)) + 60;
+            const randomIntervalSeconds = Math.floor(Math.random() * (300 - 60 + 1)) + 120; // 至少两分钟
             if (secondsLeft > randomIntervalSeconds) {
                 soundTimeout = setTimeout(() => {
                     playRandomSound();
